@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, BrainCircuit } from 'lucide-react';
-import { navLinks, companyLinks, products, services } from '@/lib/data';
+import { navLinks, companyLinks, products, services, industries } from '@/lib/data';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
@@ -16,7 +16,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import Image from 'next/image';
 
 const ListItem = ({ href, title, children }: { href: string; title: string; children: React.ReactNode }) => {
   return (
@@ -65,20 +64,11 @@ export default function Header() {
           <NavigationMenu>
             <NavigationMenuList>
                <NavigationMenuItem>
-                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {products.map((product) => (
-                       <ListItem
-                        key={product.title}
-                        title={product.title}
-                        href={product.link}
-                      >
-                        {product.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/products" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Products
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
@@ -109,15 +99,19 @@ export default function Header() {
                         {service.description}
                       </ListItem>
                     ))}
+                    <li className="col-span-2_ text-sm_ font-semibold_ p-3_ text-muted-foreground_ ">Industries</li>
+                     {industries.slice(0, 3).map((industry) => (
+                       <ListItem
+                        key={industry.name}
+                        title={industry.name}
+                        href="#"
+                      >
+                       <industry.icon className="h-4 w-4 inline-block mr-2" />
+                        AI solutions for the {industry.name.toLowerCase()} sector.
+                      </ListItem>
+                    ))}
                   </ul>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/insights" passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Insights
-                  </NavigationMenuLink>
-                </Link>
               </NavigationMenuItem>
                 <NavigationMenuItem>
                 <NavigationMenuTrigger>Company</NavigationMenuTrigger>

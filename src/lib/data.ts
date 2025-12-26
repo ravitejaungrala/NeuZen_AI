@@ -7,11 +7,12 @@ import {
   ShieldCheck,
   ShoppingBag,
   Bot,
-  Cloud,
   BarChart,
   type LucideIcon,
   BookOpen,
   Users,
+  GraduationCap,
+  Landmark,
 } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -28,6 +29,7 @@ export const navLinks = [
 export const companyLinks = [
     { href: '/about', label: 'About Us', description: 'Learn more about our mission, vision, and team.' },
     { href: '/careers', label: 'Careers', description: 'Explore open positions and join our innovative team.' },
+    { href: '/insights', label: 'Insights', description: 'Our thoughts on the present and future of AI.'},
 ]
 
 export const products = [
@@ -64,6 +66,8 @@ export const industries = [
   { name: 'Manufacturing', icon: LayoutGrid },
   { name: 'Security', icon: ShieldCheck },
   { name: 'Business', icon: Briefcase },
+  { name: 'Education', icon: GraduationCap },
+  { name: 'Government', icon: Landmark },
 ];
 
 export const caseStudies = [
@@ -103,7 +107,7 @@ export const services = [
     },
     {
         icon: BarChart,
-        title: "Data Analytics & Insights",
+        title: "Data Science & Analytics",
         description: "Unlock the power of your data with advanced analytics to drive informed decision-making."
     },
 ];
