@@ -73,16 +73,14 @@ export default function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid grid-cols-2 w-[600px] gap-3 p-4 md:w-[500px]">
-                    <div>
+                  <ul className="grid w-[600px] grid-cols-2 gap-3 p-4">
+                    <li className="flex flex-col">
                       <NavigationMenuLink asChild>
                         <Link
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="mb-2 flex select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
                           href="/solutions/industries"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            Industries
-                          </div>
+                          <h3 className="text-lg font-medium">Industries</h3>
                           <p className="text-sm leading-tight text-muted-foreground">
                             Tailored AI solutions for a diverse range of sectors.
                           </p>
@@ -97,16 +95,14 @@ export default function Header() {
                         AI solutions for the {industry.name.toLowerCase()} sector.
                       </ListItem>
                     ))}
-                    </div>
-                    <div>
-                      <NavigationMenuLink asChild>
+                    </li>
+                    <li className="flex flex-col">
+                       <NavigationMenuLink asChild>
                         <Link
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          className="mb-2 flex select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-4 no-underline outline-none focus:shadow-md"
                           href="/solutions/case-studies"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            Case Studies
-                          </div>
+                          <h3 className="text-lg font-medium">Case Studies</h3>
                           <p className="text-sm leading-tight text-muted-foreground">
                             Real-world success stories of our AI implementations.
                           </p>
@@ -121,7 +117,7 @@ export default function Header() {
                        {study.title}
                       </ListItem>
                     ))}
-                    </div>
+                    </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
