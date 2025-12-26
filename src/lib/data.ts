@@ -10,6 +10,8 @@ import {
   Cloud,
   BarChart,
   type LucideIcon,
+  BookOpen,
+  Users,
 } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -23,30 +25,35 @@ export const navLinks = [
   { href: '/careers', label: 'Careers' },
 ];
 
+export const companyLinks = [
+    { href: '/about', label: 'About Us', description: 'Learn more about our mission, vision, and team.' },
+    { href: '/careers', label: 'Careers', description: 'Explore open positions and join our innovative team.' },
+]
+
 export const products = [
   {
     title: 'Nexus Intelligence',
     description: 'Our flagship AI platform that integrates seamlessly with your existing data streams to provide actionable insights.',
     image: findImage('product-1'),
-    link: '#',
+    link: '/products',
   },
   {
     title: 'Aura Automations',
     description: 'A powerful chatbot and workflow automation tool designed to enhance customer engagement and streamline operations.',
     image: findImage('product-2'),
-    link: '#',
+    link: '/products',
   },
   {
     title: 'Synapse Cloud',
     description: 'Secure and scalable cloud infrastructure optimized for high-performance AI model training and deployment.',
     image: findImage('product-3'),
-    link: '#',
+    link: '/products',
   },
   {
     title: 'Quantum Predict',
     description: 'Advanced predictive analytics to forecast market trends, customer behavior, and operational needs with unparalleled accuracy.',
     image: findImage('product-4'),
-    link: '#',
+    link: '/products',
   },
 ];
 
@@ -87,22 +94,17 @@ export const services = [
     {
         icon: BrainCircuit,
         title: "Custom AI Development",
-        description: "We build bespoke AI models and solutions tailored to your unique business challenges and goals."
+        description: "Bespoke AI models and solutions tailored to your unique business challenges and goals."
     },
     {
         icon: Bot,
         title: "AI Chatbot Solutions",
-        description: "Deploy intelligent, human-like chatbots for customer service, lead generation, and internal support."
+        description: "Intelligent, human-like chatbots for customer service, lead generation, and internal support."
     },
     {
         icon: BarChart,
         title: "Data Analytics & Insights",
-        description: "Unlock the power of your data with our advanced analytics services to drive informed decision-making."
-    },
-    {
-        icon: Cloud,
-        title: "AI Cloud Integration",
-        description: "Seamlessly integrate and deploy AI capabilities within your existing cloud infrastructure, whether it's AWS, Azure, or GCP."
+        description: "Unlock the power of your data with advanced analytics to drive informed decision-making."
     },
 ];
 

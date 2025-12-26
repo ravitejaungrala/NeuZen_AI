@@ -3,10 +3,39 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, BrainCircuit } from 'lucide-react';
-import { navLinks } from '@/lib/data';
+import { navLinks, companyLinks, products, services } from '@/lib/data';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
+import Image from 'next/image';
+
+const ListItem = ({ href, title, children }: { href: string; title: string; children: React.ReactNode }) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <Link
+          href={href}
+          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+};
+
 
 export default function Header() {
   const pathname = usePathname();
@@ -33,20 +62,81 @@ export default function Header() {
             <BrainCircuit className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block">NeuZenAI</span>
           </Link>
-          <nav className="flex items-center gap-6 text-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  'transition-colors hover:text-foreground/80',
-                  pathname === link.href ? 'text-foreground' : 'text-foreground/60'
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <NavigationMenu>
+            <NavigationMenuList>
+               <NavigationMenuItem>
+                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {products.map((product) => (
+                       <ListItem
+                        key={product.title}
+                        title={product.title}
+                        href={product.link}
+                      >
+                        {product.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href="/services"
+                        >
+                          <BrainCircuit className="h-6 w-6" />
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            Our Services
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            Custom development, strategic implementation, and end-to-end AI integration.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    {services.map((service) => (
+                       <ListItem
+                        key={service.title}
+                        title={service.title}
+                        href="#"
+                      >
+                        {service.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/insights" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Insights
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+                <NavigationMenuItem>
+                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[300px] ">
+                    {companyLinks.map((link) => (
+                       <ListItem
+                        key={link.label}
+                        title={link.label}
+                        href={link.href}
+                      >
+                        {link.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
         <div className="flex-1 md:hidden">
           <Sheet>
