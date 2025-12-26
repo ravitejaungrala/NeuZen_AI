@@ -13,6 +13,12 @@ import {
   Users,
   GraduationCap,
   Landmark,
+  Database,
+  Cloud,
+  Code,
+  Share2,
+  Cpu,
+  Server,
 } from 'lucide-react';
 import { PlaceHolderImages } from './placeholder-images';
 
@@ -181,4 +187,24 @@ export const jobOpenings = [
             { title: "Product Manager, AI Platforms", location: "New York, NY", type: "Full-time" },
         ]
     }
+];
+
+export const techStack = [
+    { name: "Python", icon: Code },
+    { name: "TensorFlow", icon: Cpu },
+    { name: "PyTorch", icon: Cpu },
+    { name: "scikit-learn", icon: BarChart },
+    { name: "Google Cloud", icon: Cloud },
+    { name: "AWS", icon: Server },
+    { name: "Docker", icon: Database },
+    { name: "Kubernetes", icon: Share2 },
+];
+
+export const clients = [
+    { name: "QuantumLeap", logo: "/logos/quantumleap.svg" },
+    { name: "InnovateHealth", logo: "/logos/innovatehealth.svg" },
+    { name: "SecureNet", logo: "/logos/securenet.svg" },
+    { name: "RetailGiant", logo: "/logos/retailgiant.svg" },
+    { name: "FinanceForward", logo: "/logos/financeforward.svg" },
+    { name: "EduVantage", logo: "/logos/eduvantage.svg" },
 ];
