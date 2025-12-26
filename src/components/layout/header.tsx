@@ -64,7 +64,7 @@ export default function Header() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/services" legacyBehavior passHref>
+                <Link href="/services" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Services
                   </NavigationMenuLink>
@@ -126,28 +126,28 @@ export default function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/products" legacyBehavior passHref>
+                <Link href="/products" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Products
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
                <NavigationMenuItem>
-                <Link href="/insights" legacyBehavior passHref>
+                <Link href="/insights" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Insights
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/about" legacyBehavior passHref>
+                <Link href="/about" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     About Us
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/careers" legacyBehavior passHref>
+                <Link href="/careers" passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Careers
                   </NavigationMenuLink>
