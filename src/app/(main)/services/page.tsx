@@ -1,9 +1,9 @@
 import { services, industries } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ServicesPage() {
+  const extendedIndustries = [...industries, ...industries];
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
@@ -51,17 +51,25 @@ export default function ServicesPage() {
                 We apply our AI expertise to solve unique challenges across a wide range of sectors.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {industries.map((industry) => (
-                <Link href="#" key={industry.name}>
-                  <Card className="group relative overflow-hidden rounded-lg bg-background/50 shadow-sm transition-all duration-300 hover:bg-background hover:shadow-lg hover:-translate-y-2">
-                    <CardContent className="flex flex-col items-center justify-center p-6">
-                      <industry.icon className="h-10 w-10 mb-4 text-primary transition-colors" />
-                      <h3 className="text-lg font-semibold text-center">{industry.name}</h3>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
+            <div className="relative mt-12 overflow-hidden">
+                <div className="flex w-max scroll-animation">
+                    {extendedIndustries.map((industry, index) => (
+                    <div key={index} className="w-64 mx-4">
+                        <Link href="#">
+                        <Card className="group relative overflow-hidden rounded-lg bg-background/50 shadow-sm transition-all duration-300 hover:bg-background hover:shadow-lg hover:-translate-y-2 h-48">
+                            <CardContent className="flex flex-col items-center justify-center p-8 h-full">
+                            <div className="mb-4 rounded-full bg-primary/10 p-4 transition-colors group-hover:bg-primary/20">
+                                <industry.icon className="h-10 w-10 text-primary transition-colors" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-center">{industry.name}</h3>
+                            </CardContent>
+                        </Card>
+                        </Link>
+                    </div>
+                    ))}
+                </div>
+                <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-secondary/30 to-transparent"></div>
+                <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-secondary/30 to-transparent"></div>
             </div>
           </div>
         </section>
