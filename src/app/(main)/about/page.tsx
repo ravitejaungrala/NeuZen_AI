@@ -30,7 +30,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background to-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl font-bold md:text-6xl font-headline">About AetherAI</h1>
+          <h1 className="text-4xl font-bold md:text-6xl font-headline">About NeuZenAI</h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl">
             Pioneering the future of intelligence, one algorithm at a time.
           </p>

@@ -21,9 +21,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <div className="flex items-center space-x-2">
               <Avatar className="h-8 w-8">
                 <AvatarImage src="https://picsum.photos/seed/author/40/40" />
-                <AvatarFallback>AA</AvatarFallback>
+                <AvatarFallback>NT</AvatarFallback>
               </Avatar>
-              <span>AetherAI Team</span>
+              <span>NeuZenAI Team</span>
             </div>
             <span>&bull;</span>
             <time dateTime={post.date}>{post.date}</time>

@@ -9,8 +9,8 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: 'AetherAI - Building Intelligent AI Products for the Future',
-  description: 'AetherAI is an innovative startup creating the next generation of AI-powered solutions for businesses worldwide.',
+  title: 'NeuZenAI - Building Intelligent AI Products for the Future',
+  description: 'NeuZenAI is an innovative startup creating the next generation of AI-powered solutions for businesses worldwide.',
 };
 
 export default function RootLayout({

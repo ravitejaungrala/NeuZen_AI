@@ -14,7 +14,7 @@ export default function CaseStudiesSection() {
             Real-World Success Stories
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-foreground/80 md:text-xl">
-            See how leading companies are leveraging AetherAI to achieve their goals and drive innovation.
+            See how leading companies are leveraging NeuZenAI to achieve their goals and drive innovation.
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">

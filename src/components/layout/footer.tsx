@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2">
               <BrainCircuit className="h-8 w-8 text-primary" />
-              <span className="text-2xl font-bold">AetherAI</span>
+              <span className="text-2xl font-bold">NeuZenAI</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-foreground/60">
               Building the intelligent, automated, and interconnected future with artificial intelligence.
@@ -72,7 +72,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-border/40 pt-6">
           <p className="text-center text-sm text-foreground/60">
-            © {new Date().getFullYear()} AetherAI, Inc. All rights reserved.
+            © {new Date().getFullYear()} NeuZenAI, Inc. All rights reserved.
           </p>
         </div>
       </div>
