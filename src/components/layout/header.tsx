@@ -73,8 +73,8 @@ export default function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
-                    <li className="row-span-3">
+                  <ul className="grid grid-cols-2 w-[600px] gap-3 p-4 md:w-[500px]">
+                    <div>
                       <NavigationMenuLink asChild>
                         <Link
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -88,8 +88,7 @@ export default function Header() {
                           </p>
                         </Link>
                       </NavigationMenuLink>
-                    </li>
-                    {industries.slice(0, 3).map((industry) => (
+                      {industries.slice(0, 3).map((industry) => (
                        <ListItem
                         key={industry.name}
                         title={industry.name}
@@ -98,7 +97,8 @@ export default function Header() {
                         AI solutions for the {industry.name.toLowerCase()} sector.
                       </ListItem>
                     ))}
-                     <li className="row-span-3">
+                    </div>
+                    <div>
                       <NavigationMenuLink asChild>
                         <Link
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -112,8 +112,7 @@ export default function Header() {
                           </p>
                         </Link>
                       </NavigationMenuLink>
-                    </li>
-                     {caseStudies.slice(0, 3).map((study) => (
+                      {caseStudies.slice(0, 3).map((study) => (
                        <ListItem
                         key={study.company}
                         title={study.company}
@@ -122,6 +121,7 @@ export default function Header() {
                        {study.title}
                       </ListItem>
                     ))}
+                    </div>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
