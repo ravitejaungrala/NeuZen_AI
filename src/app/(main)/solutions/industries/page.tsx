@@ -1,6 +1,7 @@
 import { industries } from "@/lib/data";
-import { Card, CardContent } from "@/components/ui/card";
-import Link from "next/link";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export default function IndustriesPage() {
   return (
@@ -19,18 +20,38 @@ export default function IndustriesPage() {
 
         <section className="py-20 md:py-32">
           <div className="container mx-auto max-w-screen-xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              {industries.map((industry) => (
-                <Link href="#" key={industry.name}>
-                  <Card className="group relative overflow-hidden rounded-lg bg-background/50 shadow-sm transition-all duration-300 hover:bg-background hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2 h-full">
-                    <CardContent className="flex flex-col items-center justify-center p-8 text-center h-full">
-                      <div className="mb-4 rounded-full bg-primary/10 p-5 transition-colors group-hover:bg-primary/20">
-                         <industry.icon className="h-12 w-12 text-primary transition-colors" />
-                      </div>
-                      <h3 className="text-xl font-semibold">{industry.name}</h3>
+            <div className="space-y-16">
+              {industries.map((industry, index) => (
+                 <Card key={industry.name} className="group grid md:grid-cols-2 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20 items-center">
+                  <div className={cn("relative aspect-video md:aspect-[4/3]", index % 2 === 1 && "md:order-2")}>
+                    {industry.image && (
+                      <Image
+                        src={industry.image.imageUrl}
+                        alt={industry.image.description}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                        data-ai-hint={industry.image.imageHint}
+                      />
+                    )}
+                  </div>
+                  <div className={cn("p-8 md:p-12", index % 2 === 1 && "md:order-1")}>
+                    <CardHeader className="p-0">
+                      <CardTitle className="text-2xl md:text-3xl font-headline flex items-center gap-4">
+                        <industry.icon className="h-10 w-10 text-primary flex-shrink-0" />
+                        {industry.name}
+                      </CardTitle>
+                      <CardDescription className="pt-4 text-base">{industry.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-0 flex-grow mt-6">
+                      <h4 className="font-semibold mb-2">Use Cases:</h4>
+                      <ul className="space-y-2 text-sm text-foreground/80 list-disc pl-5">
+                        <li>Fraud detection and risk assessment</li>
+                        <li>Algorithmic trading and portfolio management</li>
+                        <li>Personalized banking and customer service</li>
+                      </ul>
                     </CardContent>
-                  </Card>
-                </Link>
+                  </div>
+                </Card>
               ))}
             </div>
           </div>

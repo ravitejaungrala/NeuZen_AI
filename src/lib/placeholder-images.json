@@ -95,6 +95,54 @@
       "description": "Professional headshot of a non-binary data scientist.",
       "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY2MzIzOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
+    },
+    {
+      "id": "industry-finance",
+      "description": "Modern stock market ticker display.",
+      "imageUrl": "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3RvY2slMjBtYXJrZXR8ZW58MHx8fHwxNzY2NjYzNDkxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stock market"
+    },
+    {
+      "id": "industry-healthcare",
+      "description": "Doctor reviewing medical data on a tablet.",
+      "imageUrl": "https://images.unsplash.com/photo-1758691462667-f2fb90a067ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpY2FsJTIwZGF0YXxlbnwwfHx8fDE3NjY3NDU4OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "medical data"
+    },
+    {
+      "id": "industry-retail",
+      "description": "Modern retail store with digital displays.",
+      "imageUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmV0YWlsJTIwc3RvcmV8ZW58MHx8fHwxNzY2NjkyNDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retail store"
+    },
+    {
+      "id": "industry-manufacturing",
+      "description": "Robotic arms working on a factory assembly line.",
+      "imageUrl": "https://images.unsplash.com/photo-1735494033576-9c882e80504c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb2JvdGljJTIwYXNzZW1ibHl8ZW58MHx8fHwxNzY2NzQ1ODk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robotic assembly"
+    },
+    {
+      "id": "industry-security",
+      "description": "Cybersecurity operations center with multiple monitors.",
+      "imageUrl": "https://images.unsplash.com/photo-1763128516808-785e80c1dd68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjeWJlcnNlY3VyaXR5JTIwY2VudGVyfGVufDB8fHx8MTc2Njc0NTg5NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cybersecurity center"
+    },
+    {
+      "id": "industry-business",
+      "description": "Team collaborating in a modern office space.",
+      "imageUrl": "https://images.unsplash.com/photo-1538688423619-a81d3f23454b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvZmZpY2UlMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8MTc2NjY3NDg1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office collaboration"
+    },
+    {
+      "id": "industry-education",
+      "description": "Student using a laptop in a modern classroom.",
+      "imageUrl": "https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGFzc3Jvb218ZW58MHx8fHwxNzY2NjMyMjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern classroom"
+    },
+    {
+      "id": "industry-government",
+      "description": "Modern city hall building with a flag.",
+      "imageUrl": "https://images.unsplash.com/photo-1624417963912-8532660d9de8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb3Zlcm5tZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzY2NzM0MzA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "government building"
     }
   ]
 }

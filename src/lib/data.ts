@@ -69,14 +69,54 @@ export const products = [
 ];
 
 export const industries = [
-  { name: 'Finance', icon: DollarSign },
-  { name: 'Healthcare', icon: HeartPulse },
-  { name: 'Retail', icon: ShoppingBag },
-  { name: 'Manufacturing', icon: LayoutGrid },
-  { name: 'Security', icon: ShieldCheck },
-  { name: 'Business', icon: Briefcase },
-  { name: 'Education', icon: GraduationCap },
-  { name: 'Government', icon: Landmark },
+  { 
+    name: 'Finance', 
+    icon: DollarSign, 
+    description: 'Empowering financial institutions with AI-driven insights for risk management, algorithmic trading, and personalized customer experiences. Our solutions help detect fraud, optimize investment strategies, and automate compliance.',
+    image: findImage('industry-finance')
+  },
+  { 
+    name: 'Healthcare', 
+    icon: HeartPulse,
+    description: 'Transforming patient care through AI-powered diagnostics, personalized treatment plans, and streamlined hospital operations. We help predict disease outbreaks, analyze medical imaging, and improve clinical trial efficiency.',
+    image: findImage('industry-healthcare')
+  },
+  { 
+    name: 'Retail', 
+    icon: ShoppingBag,
+    description: 'Revolutionizing the shopping experience with personalized recommendations, inventory optimization, and dynamic pricing. Our AI helps retailers understand customer behavior, forecast demand, and automate supply chains.',
+    image: findImage('industry-retail')
+  },
+  { 
+    name: 'Manufacturing', 
+    icon: LayoutGrid,
+    description: 'Optimizing production lines with predictive maintenance, quality control automation, and supply chain management. NeuZenAI enhances efficiency, reduces downtime, and improves product quality for manufacturers.',
+    image: findImage('industry-manufacturing')
+  },
+  { 
+    name: 'Security', 
+    icon: ShieldCheck,
+    description: 'Enhancing digital and physical security with proactive threat detection, anomaly identification, and intelligent surveillance systems. Our AI solutions protect critical assets and data from emerging threats.',
+    image: findImage('industry-security')
+  },
+  { 
+    name: 'Business', 
+    icon: Briefcase,
+    description: 'Streamlining corporate operations with intelligent automation, data-driven decision-making, and enhanced customer relationship management. We help businesses of all sizes improve productivity and foster growth.',
+    image: findImage('industry-business')
+  },
+  { 
+    name: 'Education', 
+    icon: GraduationCap,
+    description: 'Personalizing the learning journey with adaptive learning platforms, automated grading systems, and intelligent content delivery. Our AI tools support educators and empower students to achieve their full potential.',
+    image: findImage('industry-education')
+  },
+  { 
+    name: 'Government', 
+    icon: Landmark,
+    description: 'Improving public services and operational efficiency with AI-powered data analysis, resource allocation, and smart city solutions. We assist government agencies in serving citizens more effectively and transparently.',
+    image: findImage('industry-government')
+  },
 ];
 
 export const caseStudies = [
@@ -84,6 +124,9 @@ export const caseStudies = [
     company: 'QuantumLeap Corp',
     title: 'Boosting ROI by 300% with Predictive Analytics',
     description: 'QuantumLeap Corp leveraged our AI to optimize their supply chain, resulting in a massive increase in efficiency and profitability.',
+    challenge: 'QuantumLeap Corp faced significant challenges with inventory management, leading to overstocking of some products and stockouts of others, which hurt their bottom line.',
+    solution: 'NeuZenAI deployed our Quantum Predict model to analyze historical sales data, market trends, and seasonal demand, providing highly accurate inventory forecasts.',
+    results: 'The company achieved a 35% reduction in carrying costs, a 50% decrease in stockouts, and an overall 300% return on their investment within the first year.',
     image: findImage('case-study-1'),
     link: '#',
   },
@@ -91,6 +134,9 @@ export const caseStudies = [
     company: 'InnovateHealth',
     title: 'Revolutionizing Patient Care with AI-Powered Diagnostics',
     description: 'InnovateHealth implemented our diagnostic tools, reducing misdiagnosis rates by 40% and improving patient outcomes.',
+    challenge: 'Diagnostic errors in medical imaging were leading to delayed treatments and poor patient outcomes. Radiologists were overwhelmed with the volume of images needing review.',
+    solution: 'Our AI-powered image analysis tool was integrated into their existing PACS system. The tool flags potential anomalies in scans for radiologists to review, prioritizing critical cases.',
+    results: 'This led to a 40% reduction in diagnostic errors, a 60% faster turnaround time for scan interpretations, and a significant improvement in patient survival rates for critical conditions.',
     image: findImage('case-study-2'),
     link: '#',
   },
@@ -98,6 +144,9 @@ export const caseStudies = [
     company: 'SecureNet',
     title: 'Enhancing Cybersecurity with Proactive Threat Detection',
     description: 'SecureNet integrated our AI to monitor and neutralize threats in real-time, preventing major data breaches.',
+    challenge: 'SecureNet was struggling to keep up with the increasing volume and sophistication of cyber threats, with their existing systems being reactive rather than proactive.',
+    solution: 'We implemented our Nexus Intelligence platform to continuously monitor network traffic for anomalous behavior. The system uses machine learning to identify and neutralize zero-day threats in real-time.',
+    results: 'The implementation resulted in a 95% reduction in successful security breaches and saved the company millions in potential damages and regulatory fines.',
     image: findImage('case-study-3'),
     link: '#',
   },
@@ -105,6 +154,9 @@ export const caseStudies = [
     company: 'RetailGiant',
     title: 'Personalizing Shopping Experiences at Scale',
     description: 'RetailGiant used our recommendation engines to create personalized customer journeys, increasing sales by 25%.',
+    challenge: 'With millions of customers and products, RetailGiant found it difficult to provide a truly personalized shopping experience, leading to low engagement and conversion rates.',
+    solution: 'Our Aura Automations engine was used to create a hyper-personalized recommendation system that analyzes user behavior in real-time to suggest relevant products across the website and email campaigns.',
+    results: 'RetailGiant saw a 25% increase in average order value, a 30% rise in customer retention, and a significant boost in overall online sales.',
     image: findImage('blog-4'), // Using a blog image as placeholder
     link: '#',
   },
