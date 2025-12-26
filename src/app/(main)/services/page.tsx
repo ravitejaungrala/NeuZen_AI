@@ -19,20 +19,22 @@ export default function ServicesPage() {
         </section>
 
         <section className="py-20 md:py-32">
-          <div className="container mx-auto max-w-screen-xl">
-            <h2 className="text-3xl font-bold tracking-tight text-center mb-12 font-headline">Our Services</h2>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="container mx-auto max-w-screen-lg">
+            <h2 className="text-3xl font-bold tracking-tight text-center mb-16 font-headline">Our Core Services</h2>
+            <div className="grid gap-12 md:grid-cols-1">
               {services.map((service) => (
-                <Card key={service.title} className="text-center group transition-all hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20">
-                  <CardHeader>
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
-                      <service.icon className="h-8 w-8 text-primary" />
+                <Card key={service.title} className="grid md:grid-cols-5 items-center overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20">
+                    <div className="md:col-span-2 flex items-center justify-center bg-primary/10 h-full p-8 md:p-0">
+                       <service.icon className="h-24 w-24 text-primary" />
                     </div>
-                    <CardTitle className="font-headline">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-foreground/80">{service.description}</p>
-                  </CardContent>
+                    <div className="md:col-span-3 p-8">
+                        <CardHeader className="p-0">
+                            <CardTitle className="font-headline text-2xl mb-2">{service.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="p-0">
+                            <p className="text-foreground/80 text-base">{service.description}</p>
+                        </CardContent>
+                    </div>
                 </Card>
               ))}
             </div>
@@ -49,7 +51,7 @@ export default function ServicesPage() {
                 We apply our AI expertise to solve unique challenges across a wide range of sectors.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
               {industries.map((industry) => (
                 <Link href="#" key={industry.name}>
                   <Card className="group relative overflow-hidden rounded-lg bg-background/50 shadow-sm transition-all duration-300 hover:bg-background hover:shadow-lg hover:-translate-y-2">

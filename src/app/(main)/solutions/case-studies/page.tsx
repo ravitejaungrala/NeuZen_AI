@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
           <div className="container mx-auto max-w-screen-xl">
             <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
               {caseStudies.map((study) => (
-                <Card key={study.company} className="flex flex-col group overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20">
+                <Card key={study.company} className="flex flex-col group overflow-hidden transition-all hover:shadow-xl hover:shadow-primary/20">
                   {study.image && (
                     <div className="aspect-video overflow-hidden">
                       <Image
@@ -39,13 +39,13 @@ export default function CaseStudiesPage() {
                   )}
                   <CardHeader>
                     <p className="text-sm font-medium text-primary">{study.company}</p>
-                    <CardTitle>{study.title}</CardTitle>
+                    <CardTitle className="text-2xl font-headline">{study.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <p className="text-foreground/80">{study.description}</p>
                   </CardContent>
                   <CardFooter>
-                     <Button asChild variant="link" className="p-0 h-auto">
+                     <Button asChild variant="link" className="p-0 h-auto font-semibold">
                         <Link href={study.link} className="flex items-center gap-2">
                            Read Case Study <ArrowRight className="h-4 w-4" />
                         </Link>

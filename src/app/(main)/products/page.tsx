@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function ProductsPage() {
   return (
@@ -21,10 +22,10 @@ export default function ProductsPage() {
 
         <section className="py-20 md:py-32">
           <div className="container mx-auto max-w-screen-xl">
-            <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-              {products.map((product) => (
-                <Card key={product.title} className="group grid md:grid-cols-2 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20">
-                  <div className="relative aspect-video md:aspect-auto">
+            <div className="space-y-16">
+              {products.map((product, index) => (
+                <Card key={product.title} className="group grid md:grid-cols-2 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20 items-center">
+                  <div className={cn("relative aspect-video md:aspect-[4/3]", index % 2 === 1 && "md:order-2")}>
                     {product.image && (
                       <Image
                         src={product.image.imageUrl}
@@ -35,20 +36,21 @@ export default function ProductsPage() {
                       />
                     )}
                   </div>
-                  <div className="flex flex-col p-6">
+                  <div className={cn("p-8 md:p-12", index % 2 === 1 && "md:order-1")}>
                     <CardHeader className="p-0">
-                      <CardTitle className="text-2xl font-headline">{product.title}</CardTitle>
-                      <CardDescription className="pt-2">{product.description}</CardDescription>
+                      <CardTitle className="text-2xl md:text-3xl font-headline">{product.title}</CardTitle>
+                      <CardDescription className="pt-4 text-base">{product.description}</CardDescription>
                     </CardHeader>
-                    <CardContent className="p-0 flex-grow mt-4">
+                    <CardContent className="p-0 flex-grow mt-6">
+                      <h4 className="font-semibold mb-2">Key Features:</h4>
                       <ul className="space-y-2 text-sm text-foreground/80">
                         <li className="flex items-center gap-2">Feature One</li>
                         <li className="flex items-center gap-2">Feature Two</li>
                         <li className="flex items-center gap-2">Feature Three</li>
                       </ul>
                     </CardContent>
-                    <div className="mt-6">
-                      <Button asChild>
+                    <div className="mt-8">
+                      <Button asChild size="lg">
                         <Link href={product.link}>Learn More</Link>
                       </Button>
                     </div>
