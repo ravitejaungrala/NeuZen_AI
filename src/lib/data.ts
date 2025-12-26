@@ -43,19 +43,19 @@ export const companyLinks = [
 
 export const products = [
   {
-    title: 'Nexus Intelligence',
+    title: 'NvisionAI',
     description: 'Our flagship AI platform that integrates seamlessly with your existing data streams to provide actionable insights.',
     image: findImage('product-1'),
     link: '/products',
   },
   {
-    title: 'Aura Automations',
+    title: 'LensAi',
     description: 'A powerful chatbot and workflow automation tool designed to enhance customer engagement and streamline operations.',
     image: findImage('product-2'),
     link: '/products',
   },
   {
-    title: 'Synapse Cloud',
+    title: 'SwaasAI',
     description: 'Secure and scalable cloud infrastructure optimized for high-performance AI model training and deployment.',
     image: findImage('product-3'),
     link: '/products',
