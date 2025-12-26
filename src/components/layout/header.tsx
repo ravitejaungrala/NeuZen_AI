@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, BrainCircuit } from 'lucide-react';
-import { navLinks, companyLinks, services, industries } from '@/lib/data';
+import { navLinks, companyLinks, services, industries, caseStudies } from '@/lib/data';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
@@ -71,49 +71,75 @@ export default function Header() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
+                <Link href="/services" passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Services
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <Link
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/services"
+                          href="/solutions/industries"
                         >
-                          <BrainCircuit className="h-6 w-6" />
                           <div className="mb-2 mt-4 text-lg font-medium">
-                            Our Services
+                            Industries
                           </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Custom development, strategic implementation, and end-to-end AI integration.
+                            Tailored AI solutions for a diverse range of sectors.
                           </p>
                         </Link>
                       </NavigationMenuLink>
                     </li>
-                    {services.map((service) => (
-                       <ListItem
-                        key={service.title}
-                        title={service.title}
-                        href="#"
-                      >
-                        {service.description}
-                      </ListItem>
-                    ))}
-                    <li className="col-span-2_ text-sm_ font-semibold_ p-3_ text-muted-foreground_ ">Industries</li>
-                     {industries.slice(0, 3).map((industry) => (
+                    {industries.slice(0, 3).map((industry) => (
                        <ListItem
                         key={industry.name}
                         title={industry.name}
                         href="#"
                       >
-                       <industry.icon className="h-4 w-4 inline-block mr-2" />
                         AI solutions for the {industry.name.toLowerCase()} sector.
+                      </ListItem>
+                    ))}
+                     <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href="/solutions/case-studies"
+                        >
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            Case Studies
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            Real-world success stories of our AI implementations.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                     {caseStudies.slice(0, 3).map((study) => (
+                       <ListItem
+                        key={study.company}
+                        title={study.company}
+                        href="#"
+                      >
+                       {study.title}
                       </ListItem>
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-                <NavigationMenuItem>
+               <NavigationMenuItem>
+                <Link href="/insights" passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Insights
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <NavigationMenuTrigger>Company</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[300px] ">

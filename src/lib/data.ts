@@ -20,7 +20,9 @@ const findImage = (id: string) => PlaceHolderImages.find((img) => img.id === id)
 
 export const navLinks = [
   { href: '/products', label: 'Products' },
-  { href: '/services', label: 'Solutions' },
+  { href: '/services', label: 'Services' },
+  { href: '/solutions/industries', label: 'Industries' },
+  { href: '/solutions/case-studies', label: 'Case Studies' },
   { href: '/insights', label: 'Insights' },
   { href: '/about', label: 'About Us' },
   { href: '/careers', label: 'Careers' },
@@ -90,6 +92,13 @@ export const caseStudies = [
     title: 'Enhancing Cybersecurity with Proactive Threat Detection',
     description: 'SecureNet integrated our AI to monitor and neutralize threats in real-time, preventing major data breaches.',
     image: findImage('case-study-3'),
+    link: '#',
+  },
+   {
+    company: 'RetailGiant',
+    title: 'Personalizing Shopping Experiences at Scale',
+    description: 'RetailGiant used our recommendation engines to create personalized customer journeys, increasing sales by 25%.',
+    image: findImage('blog-4'), // Using a blog image as placeholder
     link: '#',
   },
 ];
