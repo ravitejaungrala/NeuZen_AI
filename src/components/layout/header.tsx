@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, BrainCircuit } from 'lucide-react';
-import { navLinks, companyLinks, services, industries, caseStudies } from '@/lib/data';
+import { companyLinks, industries, caseStudies, navLinks } from '@/lib/data';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
@@ -63,15 +63,8 @@ export default function Header() {
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
-               <NavigationMenuItem>
-                <Link href="/products" passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Products
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/services" passHref>
+                <Link href="/services" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Services
                   </NavigationMenuLink>
@@ -132,8 +125,15 @@ export default function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/products" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Products
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
                <NavigationMenuItem>
-                <Link href="/insights" passHref>
+                <Link href="/insights" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Insights
                   </NavigationMenuLink>
