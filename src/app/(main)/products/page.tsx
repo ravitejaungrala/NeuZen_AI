@@ -20,11 +20,15 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-32 scroll-mt-20">
           <div className="container mx-auto max-w-screen-xl">
             <div className="space-y-16">
               {products.map((product, index) => (
-                <Card key={product.title} className="group grid md:grid-cols-2 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20 items-center">
+                <Card 
+                  key={product.title} 
+                  id={product.title.toLowerCase().replace(/\s+/g, '-')}
+                  className="group grid md:grid-cols-2 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20 items-center scroll-mt-20"
+                >
                   <div className={cn("relative aspect-video md:aspect-[4/3]", index % 2 === 1 && "md:order-2")}>
                     {product.image && (
                       <Image
