@@ -1,10 +1,3 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { products } from "@/lib/data";
 import Image from "next/image";
@@ -25,17 +18,9 @@ export default function ProductsSection() {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full mt-12"
-        >
-          <CarouselContent>
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {products.map((product, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
+                <div key={index} className="p-1 h-full">
                   <Card className="h-full flex flex-col group overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20">
                     <CardHeader>
                       <CardTitle>{product.title}</CardTitle>
@@ -62,12 +47,8 @@ export default function ProductsSection() {
                     </CardContent>
                   </Card>
                 </div>
-              </CarouselItem>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden lg:flex" />
-          <CarouselNext className="hidden lg:flex" />
-        </Carousel>
+        </div>
       </div>
     </section>
   );

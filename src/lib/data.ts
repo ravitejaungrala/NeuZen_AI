@@ -19,13 +19,14 @@ import { PlaceHolderImages } from './placeholder-images';
 const findImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
 
 export const navLinks = [
-  { href: '/products', label: 'Products' },
   { href: '/services', label: 'Services' },
   { href: '/solutions/industries', label: 'Industries' },
   { href: '/solutions/case-studies', label: 'Case Studies' },
+  { href: '/products', label: 'Products' },
   { href: '/insights', label: 'Insights' },
   { href: '/about', label: 'About Us' },
   { href: '/careers', label: 'Careers' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export const companyLinks = [

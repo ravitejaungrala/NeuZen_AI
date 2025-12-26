@@ -140,20 +140,18 @@ export default function Header() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[300px] ">
-                    {companyLinks.map((link) => (
-                       <ListItem
-                        key={link.label}
-                        title={link.label}
-                        href={link.href}
-                      >
-                        {link.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/about" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About Us
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/careers" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Careers
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -192,11 +190,8 @@ export default function Header() {
           </Sheet>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button asChild variant="ghost">
-            <Link href="#">Log in</Link>
-          </Button>
           <Button asChild>
-            <Link href="#">Get a Demo</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
       </div>

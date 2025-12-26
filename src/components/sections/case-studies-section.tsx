@@ -17,9 +17,9 @@ export default function CaseStudiesSection() {
             See how leading companies are leveraging NeuZenAI to achieve their goals and drive innovation.
           </p>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-          {caseStudies.map((study) => (
-            <Card key={study.company} className="flex flex-col group overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {caseStudies.slice(0,3).map((study) => (
+            <Card key={study.company} className="flex flex-col group overflow-hidden transition-all hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
               {study.image && (
                 <div className="aspect-video overflow-hidden">
                   <Image
@@ -37,7 +37,7 @@ export default function CaseStudiesSection() {
                 <CardTitle>{study.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-foreground/80">{study.description}</p>
+                <p className="text-foreground/80 line-clamp-3">{study.description}</p>
               </CardContent>
               <CardFooter>
                  <Button asChild variant="link" className="p-0 h-auto">
